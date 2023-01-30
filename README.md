@@ -71,10 +71,13 @@ https://github.com/jakeFarrish/MedMapper/files/10531467/ClassDescription.docx
 
 SCRUM ROLES:
 
-Intergration Developer: Cherissa Tan
-Backend Developers: Logan Farwick, Jacob Farrish
-UI Developers: Miriam Boni, Peyton Laeace
-Project Owner / DevOps: Jacob Farrish
+  Intergration Developer: Cherissa Tan
+  
+  Backend Developers: Logan Farwick, Jacob Farrish
+  
+  UI Developers: Miriam Boni, Peyton Laeace
+  
+  Project Owner / DevOps: Jacob Farrish
 
 COMMUNICATION TOOL: 
 Teams
