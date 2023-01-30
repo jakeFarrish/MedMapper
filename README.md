@@ -80,7 +80,9 @@ SCRUM ROLES:
   Project Owner / DevOps: Jacob Farrish
 
 COMMUNICATION TOOL: 
+
 Teams
+
 Weekly Meeting Time: Thursday 4:30 pm - 5:30 pm 
 
  
