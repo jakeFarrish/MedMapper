@@ -76,8 +76,9 @@ Backend Developers: Logan Farwick, Jacob Farrish
 UI Developers: Miriam Boni, Peyton Laeace
 Project Owner / DevOps: Jacob Farrish
 
-Communication Tool: Teams
-  Weekly Meeting Time: Thursday 4:30 pm - 5:30 pm 
+COMMUNICATION TOOL: 
+Teams
+Weekly Meeting Time: Thursday 4:30 pm - 5:30 pm 
 
  
  
