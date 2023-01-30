@@ -3,6 +3,7 @@
 The purpose of this application is to assist a user with medication administration. This application recieves input from the user about their medications and when they should be administered. The application sends alerts and reminders to the user to take their medications at the appropriate time, and logs successful administration for the user as well as other parties that the user may choose to share their information with. This will allow a user to track their medication usage, and help ensure that they are taking each medication at the appropriate time each day.
 
 STORYBOARD / MOCKUP DEMO:
+
 https://user-images.githubusercontent.com/58799967/215368262-99cf4973-e667-4a01-bb83-43e583b0cdef.mp4
 
   FUNCTIONAL REQUIREMENTS:
@@ -63,10 +64,12 @@ https://user-images.githubusercontent.com/58799967/215368262-99cf4973-e667-4a01-
         Then the information will be stored in a "Medication Administration" log, and shared with members of my "Share List".
       
 
-UML CLASS Diagram:
+UML CLASS DIAGRAM:
+
 https://user-images.githubusercontent.com/58799967/215370095-469ca745-611b-4e1a-b273-db07688c2b25.png
 
-CLASS DIAGRAM DESCRIPTION:  
+CLASS DIAGRAM DESCRIPTION:
+
 https://github.com/jakeFarrish/MedMapper/files/10531467/ClassDescription.docx
 
 SCRUM ROLES:
