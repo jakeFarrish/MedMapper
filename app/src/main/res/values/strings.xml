@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Med Mapper</string>
+    <string name="my_medication">My Medication</string>
+    <string name="my_schedule">My Schedule</string>
+    <string name="share_your_schedule">Share your Schedule</string>
+    <string name="name_here">Name Here</string>
+    <string name="medication_1">Medication 1</string>
+    <string name="medication_2">Medication 2</string>
+    <string name="schedule">Schedule:</string>
+    <string name="enter_email_of_recipient">Enter Email of Recipient</string>
+
+
 </resources>
