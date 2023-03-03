@@ -1,5 +1,6 @@
 package com.medmapper.v33001.service
 
+import com.medmapper.v33001.RetrofitClientInstance
 import com.medmapper.v33001.dao.MedicineDAO
 import com.medmapper.v33001.dto.Medicine
 import kotlinx.coroutines.Dispatchers
