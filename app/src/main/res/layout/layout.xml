@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
 
-
+// buttons info, my schedule, my medication, share your schedule
     <Button
         android:id="@+id/button1"
         style="?android:attr/buttonBarButtonStyle"
@@ -38,7 +38,7 @@
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:translationY="90dp" />
-
+// text view info, font, color, size
     <TextView
         android:id="@+id/textView2"
         android:layout_width="200dp"
