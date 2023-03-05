@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.medmapper.v33001.dao.MedicineDAO
 import com.medmapper.v33001.dto.Medicine
 
-@Database(entities = arrayOf(Medicine::class), version = 1, exportSchema = false)
+@Database(entities = [Medicine::class], version = 1, exportSchema = false)
 public abstract class MedicineRoomDatabase : RoomDatabase() {
 
     abstract fun medicineDao(): MedicineDAO

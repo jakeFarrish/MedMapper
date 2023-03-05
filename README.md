@@ -1,6 +1,6 @@
 # MEDMAPPER
 
-The purpose of this application is to assist a user with medication administration. This application recieves input from the user about their medications and when they should be administered. The application sends alerts and reminders to the user to take their medications at the appropriate time, and logs successful administration for the user as well as other parties that the user may choose to share their information with. This will allow a user to track their medication usage, and help ensure that they are taking each medication at the appropriate time each day.
+The purpose of this application is to assist a user with medication administration. This application receives input from the user about their medications and when they should be administered. The application sends alerts and reminders to the user to take their medications at the appropriate time, and logs successful administration for the user as well as other parties that the user may choose to share their information with. This will allow a user to track their medication usage, and help ensure that they are taking each medication at the appropriate time each day.
 
 STORYBOARD / MOCKUP DEMO:
 
@@ -74,7 +74,7 @@ https://github.com/jakeFarrish/MedMapper/files/10531467/ClassDescription.docx
 
 SCRUM ROLES:
 
-  Intergration Developer: Cherissa Tan
+  Integration Developer: Cherissa Tan
   
   Backend Developers: Logan Farwick, Jacob Farrish
   
