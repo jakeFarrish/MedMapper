@@ -11,14 +11,23 @@ class MedicineRepository(private val medicineDAO: MedicineDAO) {
 
     // Room executes all queries on a separate thread.
     // Observed Flow will notify the observer when the data has changed.
-    val allMedicines: Flow<List<Medicine>> = medicineDAO.getAlphabetizedMedicine()
 
-    // By default Room runs suspend queries off the main thread, therefore
-    // we don't need to implement anything else to ensure we're not doing
-    // long running database work off the main thread
-    @Suppress("RedundantSuspendModifier")
-    @WorkerThread
+    val allMedicine: Flow<List<Medicine>> = medicineDAO.getAlphabetizedMedicine()
+
+    fun getMedicineList(): Flow<List<Medicine>> {
+        return medicineDAO.getAlphabetizedMedicine()
+    }
+
     suspend fun insert(medicine: Medicine) {
         medicineDAO.insert(medicine)
     }
+
+    suspend fun delete(medicine: Medicine) {
+        medicineDAO.delete(medicine)
+    }
+
+    suspend fun update(medicine: Medicine) {
+        medicineDAO.update(medicine)
+    }
+
 }

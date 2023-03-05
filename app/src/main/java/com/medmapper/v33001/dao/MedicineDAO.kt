@@ -6,12 +6,17 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface MedicineDAO {
+
     @Query("SELECT * FROM Medicine ORDER BY name ASC")
     fun getAlphabetizedMedicine(): Flow<List<Medicine>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(medicine: Medicine)
 
-    @Query("DELETE FROM Medicine")
-    suspend fun deleteAll()
+    @Delete
+    suspend fun delete(medicine: Medicine)
+
+    @Update
+    suspend fun update(medicine: Medicine)
+
 }
