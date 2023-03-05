@@ -9,7 +9,7 @@ data class Medicine(
     @PrimaryKey(autoGenerate = true) val medID: Int,
     @ColumnInfo(name = "name") val name: String?,
     @ColumnInfo(name = "strength") val strength: String?,
-    @ColumnInfo(name = "start date") val startDate: String?,
-    @ColumnInfo(name = "prescription length") val lengthInDays: Int
+    @ColumnInfo(name = "start_date") val startDate: String?,
+    @ColumnInfo(name = "prescription_length") val lengthInDays: Int
     //,@ColumnInfo() val endDate: Date = startDate
 )
