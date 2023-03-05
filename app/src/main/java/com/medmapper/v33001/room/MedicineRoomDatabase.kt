@@ -4,10 +4,13 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import com.medmapper.v33001.dao.DateConverter
 import com.medmapper.v33001.dao.MedicineDAO
 import com.medmapper.v33001.dto.Medicine
 
-@Database(entities = arrayOf(Medicine::class), version = 1, exportSchema = false)
+@Database(entities = [Medicine::class], version = 1, exportSchema = false)
+@TypeConverters(DateConverter::class)
 public abstract class MedicineRoomDatabase : RoomDatabase() {
 
     abstract fun medicineDao(): MedicineDAO
