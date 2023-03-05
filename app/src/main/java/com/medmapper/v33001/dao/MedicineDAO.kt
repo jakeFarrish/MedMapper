@@ -14,4 +14,7 @@ interface MedicineDAO {
 
     @Query("DELETE FROM Medicine")
     suspend fun deleteAll()
+    
+    @Delete
+    suspend fun delete(medicine: Medicine)
 }
