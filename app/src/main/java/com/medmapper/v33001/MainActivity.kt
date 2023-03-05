@@ -1,43 +1,47 @@
 package com.medmapper.v33001
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.medmapper.v33001.ui.theme.MedMapperTheme
+import android.view.Menu
+import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
+    private val fragmentManager: FragmentManager = supportFragmentManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            MedMapperTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
-                }
-            }
-        }
+        setContentView(layoutInflater.inflate(R.layout.main_activity, null))
+        setSupportActionBar(findViewById(R.id.toolbar))
+        setFragment(ScheduleFragment())
     }
-}
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
 
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    MedMapperTheme {
-        Greeting("Android")
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.schedule_menu_item -> {
+                setFragment(ScheduleFragment())
+            }
+            R.id.medication_menu_item -> {
+                setFragment(MedicationsFragment())
+            }
+            R.id.share_menu_item -> {
+                //todo: share()
+            }
+            else -> return false
+        }
+
+        return true
+    }
+
+    private fun setFragment(fragment: Fragment){
+        fragmentManager.beginTransaction()
+            .replace(R.id.fragment_view, fragment).commit()
     }
 }

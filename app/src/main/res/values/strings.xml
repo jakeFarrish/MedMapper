@@ -6,8 +6,13 @@
     <string name="name_here">Name Here</string>
     <string name="medication_1">Medication 1</string>
     <string name="medication_2">Medication 2</string>
-    <string name="schedule">Schedule:</string>
+    <string name="schedule_">Schedule:</string>
     <string name="enter_email_of_recipient">Enter Email of Recipient</string>
+    <string name="schedule">Schedule</string>
+    <string name="medication">Medication</string>
+    <string name="share">Share</string>
+    <string name="email">Email</string>
+    <string name="medication_name">Medication Name</string>
 
 
 </resources>
