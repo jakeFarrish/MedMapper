@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface MedicineDAO {
     @Query("SELECT * FROM Medicine ORDER BY name ASC")
-    fun getAlphabetizedMedicine(): Flow<List<Medicine>>
+    fun getAllAlphabetizedMedicine(): Flow<List<Medicine>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(medicine: Medicine)
