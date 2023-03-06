@@ -1,11 +1,12 @@
 package com.medmapper.v33001.repository
 
+import android.util.Log
 import androidx.annotation.WorkerThread
 import com.medmapper.v33001.dao.MedicineDAO
 import com.medmapper.v33001.dto.Medicine
 import kotlinx.coroutines.flow.Flow
 
-// Declares teh DAO as private property in the constructor. Pass in the DAO
+// Declares the DAO as private property in the constructor. Pass in the DAO
 // instead of the whole database, because you only need access to the DAO
 class MedicineRepository(private val medicineDAO: MedicineDAO) {
 
@@ -18,7 +19,13 @@ class MedicineRepository(private val medicineDAO: MedicineDAO) {
     // long running database work off the main thread
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
-    suspend fun insert(medicine: Medicine) {
-        medicineDAO.insert(medicine)
+    suspend fun insertMedicine(medicine: Medicine) {
+        try {
+            medicineDAO.insert(medicine)
+        }
+        catch (e: Exception){
+            Log.e("MedicineRepository", "Error inserting medicine: ${e.message}")
+            throw Exception("Error inserting medicine",e)
+        }
     }
 }
