@@ -28,6 +28,7 @@
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
+        android:gravity="center"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -64,6 +65,7 @@
         android:id="@+id/textView2"
         android:layout_width="200dp"
         android:layout_height="99dp"
+        android:gravity="right"
         android:text="@string/name_here"
         android:textAlignment="viewEnd"
         android:textAllCaps="false"

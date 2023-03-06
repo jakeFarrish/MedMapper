@@ -29,8 +29,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun Greeting(name: String) {
+val Greeting: @Composable (String) -> Unit = { name ->
     Text(text = "Hello $name!")
 }
 
