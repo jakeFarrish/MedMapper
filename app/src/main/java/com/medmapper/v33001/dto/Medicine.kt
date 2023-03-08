@@ -1,19 +1,20 @@
 package com.medmapper.v33001.dto
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-
-@Entity(tableName = "Medicine")
 data class Medicine(
-    @PrimaryKey(autoGenerate = true) val medID: Int,
-    @ColumnInfo(name = "name") val name: String?,
-    @ColumnInfo(name = "quantity") val quantity: String?,
-    @ColumnInfo(name = "start date") val startDate: String?,
-    @ColumnInfo(name = "prescription length") val lengthInDays: Int,
-    //,@ColumnInfo() val endDate: Date = startDate
-    // Haven't finished the proper calculation of endDate value for medicine
-    @ColumnInfo(name = "take time") val takeTime: String?
+    var medicationID: String = "",
+    var name: String = "",
+    var quantity: String = "",
+    var prescriptionStrength: String = "",
+    var startDate: String = "",
+    var prescriptionLength: String = "",
+    var takeTime: Double = 0.0) {
+    override fun toString(): String {
+        return "$name, $quantity , $prescriptionStrength"
+    }
 
-    // Above ^^ is the structure of the Room database with the different column information and expected values/data types
-)
+    // Need to properly create function or service to translate string to dates, etc.
+    /*fun getEndDate(): String {
+        var endDate = startDate + prescriptionLength
+        return endDate
+    }*/
+}
