@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "171246080949",
+    "project_id": "medmapper-9674e",
+    "storage_bucket": "medmapper-9674e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171246080949:android:d63a8db9d8ed1eb475bffc",
+        "android_client_info": {
+          "package_name": "com.medmapper.v33001"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171246080949-n8thgslm6bgme2u3qa2da5u8qsqmjb43.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkQeclcLVVDildefN1blhhi4aLP0TU-CQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171246080949-n8thgslm6bgme2u3qa2da5u8qsqmjb43.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
