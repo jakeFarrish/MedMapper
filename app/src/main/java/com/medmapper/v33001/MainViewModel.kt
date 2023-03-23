@@ -1,6 +1,7 @@
 package com.medmapper.v33001
 
 import android.util.Log
+import android.view.View
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -13,7 +14,7 @@ import com.medmapper.v33001.dto.Medicine
 import com.medmapper.v33001.dto.User
 import com.medmapper.v33001.service.IMedicineService
 
-class MainViewModel(var medicineService : IMedicineService) /*= MedicineService())*/ {
+class MainViewModel(var medicineService : IMedicineService) /*= MedicineService())*/ : ViewModel() {
 
     internal val NEW_MEDICATION = "New Medication"
     var medicine : MutableLiveData<List<Medicine>> = MutableLiveData<List<Medicine>>()
