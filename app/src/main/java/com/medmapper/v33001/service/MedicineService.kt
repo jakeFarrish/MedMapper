@@ -6,7 +6,9 @@ interface IMedicineService {
     suspend fun fetchMedicine() : List<Medicine>?
 }
 
-// TBD code here
-/*class MedicineService: IMedicineService {
 
-}*/
+class MedicineService: IMedicineService {
+    override suspend fun fetchMedicine(): List<Medicine>? {
+        TODO("Not yet implemented")
+    }
+}
