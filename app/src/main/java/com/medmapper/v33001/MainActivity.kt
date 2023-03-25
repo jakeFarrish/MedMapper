@@ -1,6 +1,7 @@
 package com.medmapper.v33001
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -54,6 +55,7 @@ fun SpecimenFacts(name:String) {
     var startDate by remember{mutableStateOf( "")}
     var intakeFrequency by remember{mutableStateOf("")}
     var prescriptionLength by remember{mutableStateOf("")}
+    val context=LocalContext.current
    Column {
        OutlinedTextField (
            value = medicineName,
@@ -79,7 +81,11 @@ fun SpecimenFacts(name:String) {
            value = prescriptionLength,
            onValueChange = {prescriptionLength it},
            label= {Text(stringResource(R.string.prescriptionLength))}
-   }
+       )
+       Button (
+           onClick = { Toast.makeText(context,text: "$medicineName $prescriptionStrength $startDate $intakeFrequency $prescriptionLength",
+               Toast.LENGTH_LONG).show()})
+       {Text(text="Save Info ")}
 
 }
 
