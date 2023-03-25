@@ -54,6 +54,33 @@ fun SpecimenFacts(name:String) {
     var startDate by remember{mutableStateOf( "")}
     var intakeFrequency by remember{mutableStateOf("")}
     var prescriptionLength by remember{mutableStateOf("")}
+   Column {
+       OutlinedTextField (
+           value = medicineName,
+           onValueChange = {medicineName= it},
+           label= {Text(stringResource(R.string.medicineName))}
+       )
+       OutlinedTextField (
+           value = prescriptionStrength
+           onValueChange = {prescriptionStrength= it},
+           label= {Text(stringResource(R.string.prescriptionStrength))}
+       )
+       OutlinedTextField (
+           value = startDate,
+           onValueChange = {startDate= it},
+           label= {Text(stringResource(R.string.startDate))}
+       )
+       OutlinedTextField (
+           value = intakeFrequency,
+           onValueChange = {intakeFrequency= it},
+           label= {Text(stringResource(R.string.intakeFrequency))}
+       )
+       OutlinedTextField (
+           value = prescriptionLength,
+           onValueChange = {prescriptionLength it},
+           label= {Text(stringResource(R.string.prescriptionLength))}
+   }
+
 }
 
 @Preview(showBackground = true)
