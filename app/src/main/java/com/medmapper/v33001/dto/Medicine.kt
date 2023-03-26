@@ -1,13 +1,18 @@
 package com.medmapper.v33001.dto
 
+import java.time.LocalDate
+
 data class Medicine(
-    var medicationID: String = "",
-    var name: String = "",
-    var quantity: String = "",
-    var prescriptionStrength: String = "",
-    var startDate: String = "",
+    val id: String = "",
+    val uid: String = "",
+    val name: String = "",
+    val quantity: Int = 0,
+    val prescriptionStrength: String = "",
+    val startDate: LocalDate = LocalDate.now(),
     var prescriptionLength: String = "",
-    var takeTime: Double = 0.0) {
+    val time: Long = 0,
+    // Frequency per 24 hours
+    val frequency: Int = 0) {
     override fun toString(): String {
         return "$name, $quantity , $prescriptionStrength"
     }
