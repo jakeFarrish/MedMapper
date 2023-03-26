@@ -9,7 +9,7 @@ data class Medicine(
     val quantity: Int = 0,
     val prescriptionStrength: String = "",
     val startDate: LocalDate = LocalDate.now(),
-    var prescriptionLength: String = "",
+    val prescriptionLength: String = "",
     val time: Long = 0,
     // Frequency per 24 hours
     val frequency: Int = 0) {
