@@ -67,14 +67,14 @@ class MainViewModel(var medicineService : IMedicineService) /*= MedicineService(
         user?.let {
             user ->
             val document =
-                if (selectedMedicine.medicationID == null || selectedMedicine.medicationID.isEmpty()) {
+                if (selectedMedicine.id == null || selectedMedicine.id.isEmpty()) {
                     // create a new medicine
                     firestore.collection("users").document(user.uid).collection("medications").document()
                 } else {
                     // update an existing specimen
                     firestore.collection("users").document(user.uid).collection("medications").document()
                 }
-            selectedMedicine.medicationID = document.id
+            selectedMedicine.id = document.id
             val handle = document.set(selectedMedicine)
             handle.addOnSuccessListener { Log.d("Firebase", "Document Saved") }
             handle.addOnFailureListener { Log.d("Firebase", "Save failed $it") }
