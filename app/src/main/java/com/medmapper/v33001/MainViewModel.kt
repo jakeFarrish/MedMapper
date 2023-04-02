@@ -18,7 +18,7 @@ class MainViewModel(var medicineService : IMedicineService) /*= MedicineService(
 
     internal val NEW_MEDICATION = "New Medication"
     var medicine : MutableLiveData<List<Medicine>> = MutableLiveData<List<Medicine>>()
-    var selectedMedicine by mutableStateOf(Medicine())
+    private var selectedMedicine by mutableStateOf(Medicine())
     var user: User? = null
 
     private lateinit var firestore: FirebaseFirestore
