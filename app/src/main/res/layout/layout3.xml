@@ -76,7 +76,7 @@
                 android:id="@+id/button10"
                 android:layout_width="234dp"
                 android:layout_height="78dp"
-                android:text="Add new Medicine "
+                android:text="Add new Medication "
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
@@ -93,7 +93,7 @@
                 android:text="Name"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="100dp"
-                tools:text="Medicine Name" />
+                tools:text="Medication Name" />
 
             <EditText
                 android:id="@+id/editTextTextEmailAddress2"
@@ -155,3 +155,4 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
