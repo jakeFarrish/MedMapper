@@ -5,7 +5,7 @@ import java.time.LocalDate
 data class Medicine(
     var id: String = "",
     val uid: String = "",
-    val name: String = "",
+    var name: String = "",
     val quantity: Int = 0,
     val prescriptionStrength: String = "",
     val startDate: LocalDate = LocalDate.now(),
