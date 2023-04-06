@@ -3,7 +3,7 @@ package com.medmapper.v33001.dto
 import java.time.LocalDate
 
 data class Medicine(
-    val id: String = "",
+    var id: String = "",
     val uid: String = "",
     val name: String = "",
     val quantity: Int = 0,
