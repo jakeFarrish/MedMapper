@@ -13,6 +13,7 @@ import com.google.firebase.firestore.FirebaseFirestoreSettings
 import com.medmapper.v33001.dto.Medicine
 import com.medmapper.v33001.dto.User
 import com.medmapper.v33001.service.IMedicineService
+import kotlinx.coroutines.launch
 
 class MainViewModel(var medicineService : IMedicineService) /*= MedicineService())*/ : ViewModel() {
 
@@ -57,10 +58,10 @@ class MainViewModel(var medicineService : IMedicineService) /*= MedicineService(
 
     // TBD code here
     fun fetchMedicine() {
-        /*viewModelScope.launch {
+        viewModelScope.launch {
             var innerMedicine = medicineService.fetchMedicine()
             medicine.postValue(innerMedicine)
-        }*/
+        }
     }
 
     fun saveMedicine() {
@@ -76,13 +77,18 @@ class MainViewModel(var medicineService : IMedicineService) /*= MedicineService(
                 }
             selectedMedicine.id = document.id
             val handle = document.set(selectedMedicine)
-            handle.addOnSuccessListener { Log.d("Firebase", "Document Saved") }
-            handle.addOnFailureListener { Log.d("Firebase", "Save failed $it") }
+            handle.addOnSuccessListener {
+                Log.d("Firebase", "Document Saved")
+            }
+            handle.addOnFailureListener {
+                Log.d("Firebase", "Save failed $it")
+            }
         }
     }
 
     fun saveUser() {
-        user?.let { user ->
+        user?.let {
+            user ->
             val handle = firestore.collection("users").document(user.uid).set(user)
             handle.addOnSuccessListener { Log.d("Firebase", "Document Saved") }
             handle.addOnFailureListener { Log.e("Firebase", "Save failed $it") }
