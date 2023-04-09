@@ -14,7 +14,6 @@
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:translationY="99dp" />
-    // text view info, font, color, size
     <TextView
         android:id="@+id/textView"
         android:layout_width="350dp"
@@ -25,7 +24,6 @@
         android:textStyle="bold"
         android:translationX="-100dp"
         android:translationY="180dp" />
-    // text view info, font, color, size
     <EditText
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="350dp"
@@ -35,7 +33,6 @@
         android:text="@string/enter_email_of_recipient"
         android:translationX="-450dp"
         android:translationY="450dp" />
-    // buttons info, my schedule, my medication, share your schedule
 
     <Button
         android:id="@+id/button2"
@@ -48,7 +45,6 @@
         android:textSize="16sp"
         android:translationX="-702dp"
         android:translationY="99dp" />
-    // buttons info, my schedule, my medication, share your schedule
 
     <Button
         android:id="@+id/button3"
@@ -61,7 +57,6 @@
         android:textSize="16sp"
         android:translationX="-702dp"
         android:translationY="90dp" />
-    // text view info, font, color, size
     <TextView
         android:id="@+id/textView2"
         android:layout_width="200dp"
