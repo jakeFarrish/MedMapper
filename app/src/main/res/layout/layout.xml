@@ -4,7 +4,7 @@
     android:id="@+id/Button_1"
     android:layout_width="413dp"
     android:layout_height="match_parent"
-    android:background="#637796"
+    android:background="#6892d4"
     tools:ignore="ExtraText">
     <Button
         android:id="@+id/button1"

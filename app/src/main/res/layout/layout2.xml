@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#637796">
-
+    android:background="#6892d4">
 
     <Button
         android:id="@+id/button1"
@@ -33,10 +32,9 @@
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:ems="10"
+        android:textColor="@color/white"
         android:inputType="textEmailAddress"
         android:text="@string/enter_email_of_recipient"
-        android:background="#cce0ff"
-
         android:translationX="-450dp"
         android:translationY="450dp" />
 
