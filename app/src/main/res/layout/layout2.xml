@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    // buttons info, my schedule, my medication, share your schedule
 
     <Button
         android:id="@+id/button1"
