@@ -5,15 +5,17 @@ import com.medmapper.v33001.dto.Medicine
 class MedicineDAO (private val db: FirebaseFirestore) {
 
     fun addMedicine (medicine: Medicine){
-        db.collection("medicines")
-            .add(medicine)
-            .addOnSuccessListener { documentReference ->
-                println("Medicine added. ID = ${documentReference.id}")
-            }
-            .addOnFailureListener {exception ->
-                println("Error adding medicine. ID = ${exception.message}")
-            }
+        db.collection("medicines").apply {
+            add(medicine)
+                .addOnSuccessListener { documentReference ->
+                    println("Medicine added. ID = ${documentReference.id}")
+                }
+                .addOnFailureListener {exception ->
+                    println("Error adding medicine. ID = ${exception.message}")
+                }
+        }
     }
+
     fun updateMedicine (medicine: Medicine){
         db.collection("medicines")
             .document(medicine.id)

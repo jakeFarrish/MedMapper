@@ -5,6 +5,7 @@ import android.view.View
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -14,42 +15,31 @@ import com.medmapper.v33001.dto.Medicine
 import com.medmapper.v33001.dto.User
 import com.medmapper.v33001.service.IMedicineService
 
-class MainViewModel(var medicineService : IMedicineService) /*= MedicineService())*/ : ViewModel() {
+class MainViewModel(var medicineService : IMedicineService) : ViewModel() {
 
-    internal val NEW_MEDICATION = "New Medication"
-    var medicine : MutableLiveData<List<Medicine>> = MutableLiveData<List<Medicine>>()
+    private val NEW_MEDICATION = "New Medication"
+    private val _medicine = MutableLiveData<List<Medicine>>()
+    val medicine: LiveData<List<Medicine>> get() = _medicine
     var selectedMedicine by mutableStateOf(Medicine())
     var user: User? = null
 
-    private lateinit var firestore: FirebaseFirestore
-
-    init {
-        firestore = FirebaseFirestore.getInstance()
-        firestore.firestoreSettings = FirebaseFirestoreSettings.Builder().build()
+    private val firestore: FirebaseFirestore = FirebaseFirestore.getInstance().apply {
+        firestoreSettings = FirebaseFirestoreSettings.Builder().build()
     }
 
     fun listenToMedicine() {
-        user?.let {
-            user ->
+        user?.let { user ->
             firestore.collection("users").document(user.uid).collection("medicine")
                 .addSnapshotListener { snapshot, e ->
-                    // handle the error if there is one, and then return
                     if (e != null) {
                         Log.w("Listen failed", e)
                         return@addSnapshotListener
                     }
-                    // if we reached this point, there was not an error
                     snapshot?.let {
-                        val allMedicine = ArrayList<Medicine>()
-                        allMedicine.add(Medicine(name = NEW_MEDICATION))
-                        val documents = snapshot.documents
-                        documents.forEach {
-                            val medicine = it.toObject(Medicine::class.java)
-                            medicine?.let {
-                                allMedicine.add(it)
-                            }
-                        }
-                        medicine.value = allMedicine
+                        val allMedicine = it.documents.mapNotNull { doc ->
+                            doc.toObject(Medicine::class.java)
+                        } + Medicine(name = NEW_MEDICATION)
+                        _medicine.value = allMedicine.toList()
                     }
                 }
         }

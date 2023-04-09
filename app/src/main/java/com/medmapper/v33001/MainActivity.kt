@@ -20,17 +20,19 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : ComponentActivity() {
 
-    private var firebaseUser: FirebaseUser? = FirebaseAuth.getInstance().currentUser
     private val viewModel: MainViewModel by viewModel<MainViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val firebaseUser = FirebaseAuth.getInstance().currentUser
+        firebaseUser?.let {
+            val user = User(it.uid, "")
+            viewModel.user = user
+            viewModel.listenToMedicine()
+        }
+
         setContent {
-            firebaseUser?.let {
-                val user = User(it.uid, "")
-                viewModel.user = user
-                viewModel.listenToMedicine()
-            }
             val medicine by viewModel.medicine.observeAsState(initial = emptyList())
             MedMapperTheme {
                 // A surface container using the 'background' color from the theme
@@ -44,6 +46,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
 
 @Composable
 fun Greeting(name: String) {
