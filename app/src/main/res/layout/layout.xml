@@ -11,7 +11,7 @@
         style="?android:attr/buttonBarButtonStyle"
         android:layout_width="137dp"
         android:layout_height="100dp"
-        android:background="#5e7aa6"
+        android:background="#cce0ff"
         android:text="@string/my_schedule"
         android:textColor="@android:color/black"
         android:textSize="16sp"
@@ -22,7 +22,7 @@
         style="?android:attr/buttonBarButtonStyle"
         android:layout_width="137dp"
         android:layout_height="100dp"
-        android:background="#5e7aa6"
+        android:background="#cce0ff"
         android:text="@string/my_medication"
         android:textColor="@android:color/black"
         android:textSize="16sp"
@@ -33,12 +33,11 @@
         style="?android:attr/buttonBarButtonStyle"
         android:layout_width="137dp"
         android:layout_height="100dp"
-        android:background="#5e7aa6"
+        android:background="#cce0ff"
         android:text="@string/share_your_schedule"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:translationY="90dp" />
-// text view info, font, color, size
     <TextView
         android:id="@+id/textView2"
         android:layout_width="200dp"
@@ -48,6 +47,7 @@
         android:textAllCaps="false"
         android:textColor="#000000"
         android:textSize="34sp"
+        android:background="#ffffff"
 
         android:translationX="-202dp"
         android:translationY="-20dp" />
@@ -60,7 +60,7 @@
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="34sp"
-        android:background="#5e7aa6"
+        android:background="#cce0ff"
         android:translationX="-600dp"
         android:translationY="190dp" />
 
@@ -72,7 +72,7 @@
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="34sp"
-        android:background="#5e7aa6"
+        android:background="#cce0ff"
         android:translationX="-988dp"
         android:translationY="290dp" />
 
@@ -84,7 +84,7 @@
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="34sp"
-        android:background="#5e7aa6"
+        android:background="#cce0ff"
         android:translationX="-1376dp"
         android:translationY="390dp" />
 
@@ -96,7 +96,7 @@
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="34sp"
-        android:background="#5e7aa6"
+        android:background="#cce0ff"
         android:translationX="-1765dp"
         android:translationY="490dp" />
 

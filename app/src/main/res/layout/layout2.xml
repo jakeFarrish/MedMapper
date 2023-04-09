@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#637796">
 
 
     <Button
@@ -9,10 +10,11 @@
         style="?android:attr/buttonBarButtonStyle"
         android:layout_width="137dp"
         android:layout_height="100dp"
-        android:background="@android:color/darker_gray"
+        android:background="#cce0ff"
         android:text="@string/my_schedule"
         android:textColor="@android:color/black"
         android:textSize="16sp"
+
         android:translationY="99dp" />
     <TextView
         android:id="@+id/textView"
@@ -22,6 +24,8 @@
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:background="#cce0ff"
+
         android:translationX="-100dp"
         android:translationY="180dp" />
     <EditText
@@ -31,6 +35,8 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="@string/enter_email_of_recipient"
+        android:background="#cce0ff"
+
         android:translationX="-450dp"
         android:translationY="450dp" />
 
@@ -39,7 +45,7 @@
         style="?android:attr/buttonBarButtonStyle"
         android:layout_width="137dp"
         android:layout_height="100dp"
-        android:background="@android:color/darker_gray"
+        android:background="#cce0ff"
         android:text="@string/my_medication"
         android:textColor="@android:color/black"
         android:textSize="16sp"
@@ -51,7 +57,7 @@
         style="?android:attr/buttonBarButtonStyle"
         android:layout_width="137dp"
         android:layout_height="100dp"
-        android:background="@android:color/darker_gray"
+        android:background="#cce0ff"
         android:text="@string/share_your_schedule"
         android:textColor="@android:color/black"
         android:textSize="16sp"
@@ -66,6 +72,7 @@
         android:textAllCaps="false"
         android:textColor="#000000"
         android:textSize="34sp"
+        android:background="#ffffff"
         android:translationX="-902dp"
         android:translationY="-20dp" />
 </LinearLayout>
